@@ -1,0 +1,30 @@
+[OSEv3:children]
+nodes
+nfs
+masters
+etcd
+
+[OSEv3:vars]
+ansible_ssh_user=root
+deployment_type=origin
+
+[nodes:vars]
+openshift_disable_check=disk_availability,memory_availability,docker_storage,docker_image_availability
+openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/.htpasswd'}]
+openshift_master_default_subdomain=apps.node155.9.115.17.155.nip.io
+
+[masters:vars]
+openshift_disable_check=disk_availability,memory_availability,docker_storage
+
+[nodes]
+9.115.17.155  openshift_public_ip=9.115.17.155 openshift_ip=9.115.17.155 openshift_public_hostname=node155.9.115.17.155.nip.io openshift_hostname=node155.9.115.17.155.nip.io connect_to=9.115.17.155 openshift_node_labels="{'region': 'infra'}" openshift_schedulable=True ansible_connection=local
+9.115.17.156  openshift_public_ip=9.115.17.156 openshift_ip=9.115.17.156 openshift_public_hostname=node156.9.115.17.156.nip.io openshift_hostname=node156.9.115.17.156.nip.io connect_to=9.115.17.156  openshift_schedulable=True
+
+[nfs]
+9.115.17.155 connect_to=9.115.17.155 ansible_connection=local
+
+[masters]
+9.115.17.155  openshift_public_ip=9.115.17.155 openshift_ip=9.115.17.155 openshift_public_hostname=node155.9.115.17.155.nip.io openshift_hostname=node155.9.115.17.155.nip.io connect_to=9.115.17.155 ansible_connection=local
+
+[etcd]
+9.115.17.155  openshift_public_ip=9.115.17.155 openshift_ip=9.115.17.155 openshift_public_hostname=node155.9.115.17.155.nip.io openshift_hostname=node155.9.115.17.155.nip.io connect_to=9.115.17.155 ansible_connection=local
