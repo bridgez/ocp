@@ -1,10 +1,12 @@
-docker.io/openshift/origin-service-catalog   v3.10.0             000ffb2cc620        15 hours ago        302 MB
-docker.io/openshift/origin-node              v3.10.0             df151e836a73        15 hours ago        1.31 GB
-docker.io/openshift/origin-haproxy-router    v3.10.0             58bf0b41990c        15 hours ago        844 MB
-docker.io/openshift/origin-deployer          v3.10.0             c567c23cad9e        15 hours ago        820 MB
-docker.io/openshift/origin-control-plane     v3.10.0             ba72c8f01460        15 hours ago        820 MB
-docker.io/openshift/origin-pod               v3.10.0             47ce16ef0a52        15 hours ago        223 MB
-docker.io/cockpit/kubernetes                 latest              c78d2478c2c6        7 days ago          286 MB
-docker.io/openshift/origin-web-console       v3.10.0             7098d8b0a928        3 weeks ago         337 MB
-docker.io/openshift/origin-docker-registry   v3.10.0             a212cdb63bfb        4 weeks ago         302 MB
-quay.io/coreos/etcd                          v3.2.22             ff5dd2137a4f        2 months ago        37.3 MB
+docker.io/ansibleplaybookbundle/origin-ansible-service-broker
+docker.io/cockpit/kubernetes
+docker.io/openshift/origin-control-plane
+docker.io/openshift/origin-deployer
+docker.io/openshift/origin-docker-registry
+docker.io/openshift/origin-haproxy-router
+docker.io/openshift/origin-node
+docker.io/openshift/origin-pod
+docker.io/openshift/origin-service-catalog
+docker.io/openshift/origin-template-service-broker
+docker.io/openshift/origin-web-console
+quay.io/coreos/etcd
