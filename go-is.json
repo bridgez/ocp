@@ -1,0 +1,18 @@
+{
+  "kind": "ImageStream",
+  "apiVersion": "v1",
+  "metadata": {
+      "name": "go"
+  },
+  "spec": {
+    "tags": [
+      {
+        "name": "v1.0",
+        "from": {
+          "kind": "DockerImage",
+          "name": "docker.io/bridgez/go-rhel7"
+        }
+      }
+    ]
+  }
+}
